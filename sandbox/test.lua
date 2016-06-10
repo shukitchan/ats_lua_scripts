@@ -44,6 +44,7 @@ function __init__(args)
     TS_LUA_HOOK_SEND_RESPONSE_HDR = TS_LUA_HOOK_SEND_RESPONSE_HDR,
 
     -- white-listed lua global functions
+    -- see here for list of functions to whitelist - http://lua-users.org/wiki/SandBoxes
     tostring = tostring,
     string = {reverse = string.reverse},
 
