@@ -1,5 +1,5 @@
--- depends on "redis-lua" - https://github.com/nrk/redis-lua
--- redis-lua depends on LuaSocket - http://w3.impa.br/~diego/software/luasocket/
+-- depends on "redis-lua" 2.0.4 - https://github.com/nrk/redis-lua
+-- redis-lua depends on LuaSocket v3.0-rc1 - https://github.com/diegonehab/luasocket
 
 -- unix domain socket has better performance and so we should set up local redis to use that
 -- Note the sock must be readable/writable by nobody since ATS runs as that user
