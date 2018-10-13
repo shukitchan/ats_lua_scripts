@@ -8,6 +8,9 @@
 -- A cache lookup will result in a miss if the counter value is larger than that recorded in the cached respone header
 -- All X-Cache-Tags headers are removed from the response sent to the user. 
 
+-- Reference - https://www.drupal.org/docs/8/api/cache-api/cache-tags-varnish
+-- Reference - https://support.cloudflare.com/hc/en-us/articles/206596608-How-to-Purge-Cache-Using-Cache-Tags-Enterprise-only-
+
 function do_global_read_request()
   ts.debug("global read request hook")
 
