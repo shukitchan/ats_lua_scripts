@@ -3,7 +3,7 @@
 -- Setup Instructions
 -- 1) install libmaxminddb - 1.4.2 (https://github.com/maxmind/libmaxminddb)
 -- 2) Get GeoLite2 country database (GeoLite2-Country.mmdb) from https://dev.maxmind.com/geoip/geoip2/geolite2/ and put it in /usr/local/var/lua/
--- 3) install luajit-maxminddb (https://github.com/shukitchan/luajit). Copy maxminddb.lua to /usr/local/share/lua/5.1/
+-- 3) install luajit-maxminddb (https://github.com/shukitchan/luajit-maxminddb). Copy maxminddb.lua to /usr/local/share/lua/5.1/
 
 ts.add_package_path('/usr/local/share/lua/5.1/?.lua')
 
