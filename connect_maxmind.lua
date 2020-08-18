@@ -3,12 +3,11 @@
 -- Setup Instructions
 -- 1) install libmaxminddb - 1.4.2 (https://github.com/maxmind/libmaxminddb)
 -- 2) Get GeoLite2 country database (GeoLite2-Country.mmdb) from https://dev.maxmind.com/geoip/geoip2/geolite2/ and put it in /usr/local/var/lua/
--- 3) Patch lua-resty-maxminddb (https://github.com/anjia0532/lua-resty-maxminddb.git) with lua-resty-maxminddb.patch in this repo. 
+-- 3) Get lua-resty-maxminddb (https://github.com/anjia0532/lua-resty-maxminddb.git) 
 --   a) git clone https://github.com/anjia0532/lua-resty-maxminddb.git
 --   b) cd lua-resty-maxminddb
---   c) git checkout 50e101819223dff33b2963af93de4995a615f793
---   d) patch -p0 < ../lua-resty-maxminddb.patch
--- 4) Copy lua-resty-maxminddb/lib/resty/maxminddb.lua to /usr/local/share/lua/5.1/
+--   c) git checkout d00c9f32224b4603f2e049b1edf2ddee9dd5b1bc
+--   d) cp lib/resty/maxminddb.lua /usr/local/share/lua/5.1/
 
 ts.add_package_path('/usr/local/share/lua/5.1/?.lua')
 
