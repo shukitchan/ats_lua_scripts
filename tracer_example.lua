@@ -11,6 +11,7 @@
 -- 3) jaeger_client_cpp 0.4.2
 --    wget https://github.com/jaegertracing/jaeger-client-cpp/releases/download/v0.4.2/libjaegertracing_plugin.linux_amd64.so
 --    cp libjaegertracing_plugin.linux_amd64.so /usr/local/lib/libjaegertracing_plugin.so
+-- 4) Copy the jaeger-config.json from this repo and copy to /usr/local/etc/ . Make sure it is readable by ATS.
 
 local bridge_tracer = require('opentracing_bridge_tracer')
 
