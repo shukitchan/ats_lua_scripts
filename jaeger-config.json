@@ -1,0 +1,11 @@
+{
+  "service_name": "hello",
+  "diabled": false,
+  "reporter": {
+    "logSpans": true
+  },
+  "sampler": {
+    "type": "const",
+    "param": "1"
+  }
+}
