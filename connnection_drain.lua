@@ -12,10 +12,7 @@ function __init__(args)
     TS_LUA_STAT_PERSISTENT,
     TS_LUA_STAT_SYNC_COUNT)
 
-  local value = in_rotation:get_value()
-  if(value ~= 0 or value ~= 1) then
-    in_rotation:set_value(1)
-  end
+  in_rotation:set_value(1)
 end
 
 function do_global_send_response()
@@ -29,7 +26,7 @@ function do_global_send_response()
   local req_path = ts.client_request.get_uri() or ''
   if(req_scheme == 'http' and req_host=='test3.com' and req_path=='/__hc') then
     local status = ts.client_response.get_status() or ''
-    if (status == '200') then
+    if (status == 200) then
       in_rotation:set_value(1)
     else
       in_rotation:set_value(0)
