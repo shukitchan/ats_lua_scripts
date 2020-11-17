@@ -4,6 +4,7 @@
 -- 3) If status code is 200 we add a 103 early hints header to the response
 
 -- Tested on ATS 8.1.0
+-- Reference Article: https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code
 
 function process(purl, phdrs)
     -- getting url, headers for the fetch
