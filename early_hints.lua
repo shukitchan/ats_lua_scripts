@@ -1,7 +1,8 @@
 -- Status 103 Early Hints example using intercept / fetch 
--- 1) We use an intercept to stop the processing of the request
--- 2) We use fetch to get back the response of the request
--- 3) If status code is 200 we add a 103 early hints header to the response
+-- 1) This lua script is for use in remap.config e.g. map http://test1.com/ http://httpbin.org/ @plugin=tslua.so @pparam=/<script location>/early_hints.lua
+-- 2) We use an intercept to stop the processing of the request
+-- 3) We use fetch to get back the response of the request
+-- 4) If status code is 200 we add a 103 early hints header to the response
 
 -- Tested on ATS 8.1.0
 -- Reference Article: https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code
