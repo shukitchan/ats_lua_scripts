@@ -1,7 +1,7 @@
 -- Example showing how to do tracing with jaeger
 -- depends on opentracing-1.5.1, lua-bridge-tracer-0.1.1, jaeger_client_cpp
 --
--- 1) opentraing-1.5.1 
+-- 1) opentracing-1.5.1 
 --    wget https://github.com/opentracing/opentracing-cpp/archive/v1.5.1.tar.gz 
 --    follow instructions to compile and install
 -- 2) lua-bridge-tracer 0.1.1
