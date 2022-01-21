@@ -1,3 +1,5 @@
+-- Moved to https://github.com/apache/trafficserver/tree/master/example/plugins/lua-api
+
 -- Check out https://docs.trafficserver.apache.org/en/latest/admin-guide/plugins/ts_lua.en.html
 -- for information on how to run the script
 -- 
