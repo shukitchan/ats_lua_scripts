@@ -1,3 +1,5 @@
+-- Moved to https://github.com/apache/trafficserver/tree/master/example/plugins/lua-api
+
 -- Prerequisite 0 - Use ATS 8.0.x
 
 -- Prerequisite 1 - Luajit-2.1.0 beta3/Lua 5.1.4/LuaSocket 3.0 rc1/redis-lua 2.0.4
