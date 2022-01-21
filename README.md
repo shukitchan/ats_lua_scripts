@@ -1,1 +1,1 @@
-This contains some lua scripts for ATS ts_lua plugin
+This contains some lua scripts for ATS lua plugin
