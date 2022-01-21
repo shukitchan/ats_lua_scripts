@@ -1,3 +1,5 @@
+-- Moved to https://github.com/apache/trafficserver/tree/master/example/plugins/lua-api
+
 -- depends on "luajit-geoip"
 
 -- Setup Instructions
