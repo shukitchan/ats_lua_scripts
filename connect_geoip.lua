@@ -1,4 +1,5 @@
 -- Moved to https://github.com/apache/trafficserver/tree/master/example/plugins/lua-api
+-- GeoIP legacy data can be retrieved here - https://mailfud.org/geoip-legacy/
 
 -- depends on "luajit-geoip"
 
