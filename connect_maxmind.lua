@@ -1,3 +1,5 @@
+-- Moved to https://github.com/apache/trafficserver/tree/master/example/plugins/lua-api
+
 -- Use maxmind GeoLite2 database to return information from an IP address
 
 -- Setup Instructions
