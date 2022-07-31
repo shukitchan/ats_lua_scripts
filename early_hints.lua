@@ -1,11 +1,22 @@
 -- Status 103 Early Hints example using intercept / fetch 
--- 1) This lua script is for use in remap.config e.g. map http://test1.com/ http://httpbin.org/ @plugin=tslua.so @pparam=/<script location>/early_hints.lua
+-- 1) This lua script is for use in remap.config e.g. map https://test1.com/ http://httpbin.org/ @plugin=tslua.so @pparam=/<script location>/early_hints.lua
 -- 2) We use an intercept to stop the processing of the request
 -- 3) We use fetch to get back the response of the request
 -- 4) If status code is 200 we add a 103 early hints header to the response
+-- 5) Tested with curl 7.79.1 using HTTP/2 (e.g. curl -ik -H 'Host: test1.com' 'https://localhost/headers')
+--      Result: 
+-- HTTP/2 103
+-- link: </test.css>; rel=preload
+-- date: Sun, 31 Jul 2022 06:41:08 GMT
+-- server: ATS
 
--- Tested on ATS 8.1.0
--- Reference Article: https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code
+-- HTTP/2 200
+
+-- Tested on ATS 9.1.x
+-- References
+--   https://www.fastly.com/blog/beyond-server-push-experimenting-with-the-103-early-hints-status-code
+--   https://early-hints.fastlylabs.com/
+--   https://www.shopify.com also using early hints
 
 function process(purl, phdrs)
     -- getting url, headers for the fetch
