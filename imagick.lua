@@ -17,7 +17,7 @@
 -- sudo make install
 
 -- Put this file in /usr/local/var/lua/imagick.lua and use this in a line in remap.config
--- e.g. map https://www.test.com/test.jpg https://origin.test.com/test.jpb @tslua.so @pparam=/usr/local/var/lua/imagick.lua
+-- e.g. map https://www.test.com/test.jpg https://origin.test.com/test.jpb @plugin=tslua.so @pparam=/usr/local/var/lua/imagick.lua
 
 ts.add_package_cpath("/usr/lib64/lua/5.1/?.so")
 local magick = require "imagick"
