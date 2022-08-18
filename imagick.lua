@@ -23,7 +23,7 @@ ts.add_package_cpath("/usr/lib64/lua/5.1/?.so")
 local magick = require "imagick"
 
 function transform(data, eos)
-  ts.ctx["image"] = ts.ctx["image"] .. data
+  ts.ctx["image"] = (ts.ctx["image"] or '') .. data
   
   if eos == 1 then
     local img = magick.open_blob(ts.ctx["image"])
