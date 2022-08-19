@@ -1,6 +1,6 @@
 -- Resize image on the fly
 
--- Prerequisite 1 - make sure you have imagick 
+-- Prerequisite 1 - make sure you have ImageMagick
 
 -- sudo yum install ImageMagick-devel
 
