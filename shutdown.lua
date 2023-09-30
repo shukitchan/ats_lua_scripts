@@ -10,6 +10,9 @@
 -- curl -v -H'choice: cut_client' -H 'Host: test.com' -d "@test.txt" -X POST 'http://localhost:8080/post'
 -- this will shutdown connection with the client. It will cause the client to lose connection with ATS
 
+-- reference for shutdown call 
+-- https://www.man7.org/linux/man-pages/man2/shutdown.2.html
+
 local ffi = require 'ffi'
 
 ffi.cdef[[
