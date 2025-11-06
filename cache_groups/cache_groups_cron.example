@@ -1,0 +1,31 @@
+# Cache Groups Cleanup Cron Configuration
+# 
+# This file contains example cron entries for running cache groups cleanup.
+# Copy the desired entries to your crontab or to /etc/cron.d/cache-groups-cleanup
+#
+# To install:
+# 1. Copy this file: sudo cp cache_groups_cron.example /etc/cron.d/cache-groups-cleanup
+# 2. Remove the .example extension and edit paths as needed
+# 3. Ensure the file has proper permissions: sudo chmod 644 /etc/cron.d/cache-groups-cleanup
+
+# Run cleanup every hour (recommended for most setups)
+0 * * * * root /opt/cache_groups/run_cleanup.sh >/dev/null 2>&1
+
+# Run cleanup every 30 minutes with 2-hour retention
+*/30 * * * * root /opt/cache_groups/run_cleanup.sh --max-age 7200 >/dev/null 2>&1
+
+# Run cleanup every 15 minutes with verbose logging (for debugging)
+# */15 * * * * root /opt/cache_groups/run_cleanup.sh --verbose
+
+# Run cleanup daily at 2 AM with 24-hour retention (for low-traffic sites)
+# 0 2 * * * root /opt/cache_groups/run_cleanup.sh --max-age 86400
+
+# Run cleanup every 6 hours with custom Redis socket path
+# 0 */6 * * * root /opt/cache_groups/run_cleanup.sh --socket-path /tmp/redis.sock
+
+# Notes:
+# - Adjust paths to match your installation directory
+# - The 'root' user should be changed to the appropriate user (e.g., 'trafficserver')
+# - Remove >/dev/null 2>&1 if you want to receive email notifications
+# - Consider running cleanup more frequently for high-traffic sites
+# - Less frequent cleanup is fine for sites with longer-lived content
